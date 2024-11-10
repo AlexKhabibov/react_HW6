@@ -1,21 +1,17 @@
 import React from "react";
-import AddTodo from "./components/AddTodo";
-import TodoList from "./components/TodoList";
-import TodoFilter from "./components/TodoFilter";
-import { FilterProvider } from "./contexts/FilterContext";
-import GetUsers from "./components/GetUsers";
+import { AddProductForm } from "./features/products/AddProductForm";
+import { ProductsList } from "./features/products/ProductsList";
+import { EditProductForm } from "./features/products/EditProductForm";
 
-const App = () => {
+function App() {
   return (
     <div>
-      <FilterProvider>
-        <AddTodo />
-        <TodoList />
-        <TodoFilter />
-      </FilterProvider>
-      <GetUsers />
+      <h1>Product Catalog Management</h1>
+      <AddProductForm />
+      <ProductsList />
+      <EditProductForm />
     </div>
   );
-};
+}
 
 export default App;
